@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+<title>Manipulando Arquivos</title>
+</head>
+<body>
+	<h1>Manipulando Arquivos</h1>
+	<h2>Abrir arquivos</h2>
+	<input id="inputFile" type="file" onchange="pegarArquivo(this.files)">
+	
+	<p id="atributos"></p>
+	
+	<script>
+		/*pegar nome, tipo e tamanho do arquivo*/
+		function pegarArquivo(arquivoSelecionado)
+		{
+			if(arquivoSelecionado.files) {
+			 var file= arquivoSelecionado.files[0];
+			 document.getElementById('atributos').innerHTML = 
+			 '	nome do arquivo: '+file.name +
+			 ';	tipo do arquivo: '+file.type+
+			 '; tamanho do arquivo: '+file.size + ' bytes'
+			 
+			}
+		}
+	</script>
+<body>
+</html>

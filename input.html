@@ -1,0 +1,63 @@
+<!doctype html>
+<head>
+<title>Manipulando Arquivos</title>
+</head>
+<body>
+<h1>Controle de Estoque</h1>
+<div id="formulario">
+		<legend>Entradas</legend>
+		<table border="1">
+			<tr>
+			<th>Material</th>
+			<th>Quantidade</th>
+			<th>UND</th>
+			<th>Valor Unitário</th>
+			<th>Totais</th>
+			</tr>
+			<tr>
+			<td><input id="material" name="material" type="text" width="20px" placeholder="Descrição do material"></td>
+			<td><input id="qtd" name="qtd" type="text" width="20px" placeholder="Quantidade"></td>
+			<td>
+				<select name="Unidade" id="un" form="unform">
+					<option value="kg">KG</option>
+					<option value="un">UN</option>
+					<option value="cx">CX</option>
+					<option value="lata">Lata</option>
+					<option value="lt">Litro</option>
+				</select>
+			</td>
+			<td><input id="vlrUnt" name="vlrUnt" type="text" width="20px" placeholder="Valor"></td>
+			<td><input id="tot" name="tot" type="text" width="20px" placeholder="Totais" readonly=“true”></td>
+
+			</tr>
+<div>
+	
+	<script>
+		var parent = document.getElementById("formulario");
+		
+		parent.addEventListener("keydown",dispara);
+		
+		function dispara() 
+		{
+		
+
+
+// Criar elemento
+var linha = document.createElement('tr');
+
+// Criar o nó de texto
+var cabecalho = document.createElement('th');
+
+// Anexar o nó de texto ao elemento h1
+var texto = document.createTextNode("Um título qualquer");
+
+
+
+// Agora sim, inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
+cabecalho.appendChild(texto);
+linha.appendChild(cabecalho);
+parent.appendChild(linha);
+		}
+	</script>
+<body>
+</html>
